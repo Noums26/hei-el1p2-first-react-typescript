@@ -33,28 +33,40 @@ const App: React.FC = () => {
                     <div className='titleBoard'>
                         <h4>Todo</h4><hr />
                     </div>
-                    <Card id='test' className='card' draggable={true}>
-                        <p>TEpr</p>
-                    </Card>
+                    {todos.map((todo) => {
+                        if (todo.status === "Todo") {
+                            return (
+                            <Card id='tet' className='card' draggable={true}>
+                                <h4>{todo.title}</h4>
+                                <p>{todo.description}</p>
+                            </Card>)
+                        }})}
                 </Board>
                 <Board id="Doing" className="board doing">
                     <div className='titleBoard'>
                         <h4>Doing</h4><hr />
                     </div>
-                    <Card id='tet' className='card' draggable={true}>
-                        <p>TEpr</p>
-                    </Card>
-                    <Card id='tet' className='card' draggable={true}>
-                        <p>TEpr</p>
-                    </Card>
+                    {todos.map((todo) => {
+                        if (todo.status === "Doing") {
+                            return (
+                            <Card id='tet' className='card' draggable={true}>
+                                <h4>{todo.title}</h4>
+                                <p>{todo.description}</p>
+                            </Card>)
+                        }})}
                 </Board>
                 <Board id="Done" className="board done">
                     <div className='titleBoard'>
                         <h4>Done</h4><hr />
                     </div>
-                    <Card id='ta' className='card' draggable={true}>
-                        <p>TEpr</p>
-                    </Card>
+                    {todos.map((todo) => {
+                        if (todo.status === "Done") {
+                            return (
+                            <Card id='tet' className='card' draggable={true}>
+                                <h4>{todo.title}</h4>
+                                <p>{todo.description}</p>
+                            </Card>)
+                        }})}
                 </Board>
             </main>
         </div>

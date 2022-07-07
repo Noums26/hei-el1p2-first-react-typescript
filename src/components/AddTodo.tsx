@@ -9,16 +9,17 @@ interface Props {
 const AddTodo: React.FC<Props> = ({todo, handleChange, handleAdd}) => {
     // console.log(todo)
     return (
-        <div>
+        <div className='taskForm'>
+            <h3>New Task</h3><hr />
             <form onSubmit={handleAdd}>
-                <input type="text" name="title" placeholder="Libelé" value={todo.title} onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/>
-                <textarea name="description" placeholder="Description de la tache a faire..." value={todo.description} onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}></textarea>
+                <input type="text" name="title" placeholder="Label of the task" value={todo.title} className='titleInput' onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/>
+                <textarea name="description" placeholder="Description of the task..." className='titleInput' value={todo.description} onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}></textarea>
                 <div>
-                    <label><input type="radio" name="status" value="Todo" onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/> A faire</label>
-                    <label><input type="radio" name="status" value="Doing" onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/> En cours</label>
-                    <label><input type="radio" name="status" value="Done" onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/> Fait</label>
+                    <label className='radio'><input type="radio" name="status" value="Todo" onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/> Todo</label>
+                    <label className='radio'><input type="radio" name="status" value="Doing" onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/> Doing</label>
+                    <label className='radio'><input type="radio" name="status" value="Done" onChange={e => handleChange({...todo,[e.target.name]:e.target.value})}/> Done</label>
                 </div>
-                <button type="submit">Ajouter</button>
+                <button type="submit" className='btnAdd'>Add</button>
             </form>
         </div>
     );

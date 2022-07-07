@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    padding: 15px;
+}
+
+.taskForm {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: rgba(10, 10, 10, 0.685) 3px 3px 5px;
+    border-radius: 4px;
+    background-color: rgb(48, 48, 48);
+    color: rgb(253, 255, 224);
+    text-align: center;
+
+    padding: 15px;
+}
+
+.taskForm .titleInput {
+    width: 100%;
+    max-width: 362px;
+    box-sizing: content-box;
+    border-radius: 3px;
+    border: none;
+
+    color: rgba(10, 10, 10, 1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+
+    margin: 4px 0;
+    padding: 4px;
+}
+
+.radio {
+    margin: 0 20px;
+}
+
+.btnAdd {
+    width: 100%;
+    max-width: 362px;
+
+    color: rgb(10, 10, 10);
+    background-color: rgb(228, 175, 2);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+
+    padding: 7px 15px;
+    margin: 10px 0;
+}

@@ -1,7 +1,8 @@
 import React, {FormEvent, useEffect, useState} from 'react';
 import {Todo} from "./model";
 import AddTodo from "./components/AddTodo"
-import { FormatInputPathObject } from 'path/posix';
+import './App.css'
+
 const App: React.FC = () => {
     
     const initialTodo: Todo = {
@@ -23,7 +24,7 @@ const App: React.FC = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <AddTodo todo={todo} handleChange={setTodo} handleAdd={handleAdd} />
         </div>
     );

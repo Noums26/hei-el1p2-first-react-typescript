@@ -49,3 +49,57 @@
     padding: 7px 15px;
     margin: 10px 0;
 }
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgba(247, 246, 193, 0.842);
+    width: 100%;
+
+    border-radius: 4px;
+    box-shadow: rgba(10, 10, 10, 0.685) 3px 3px 5px;
+
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.flexbox .board {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 4px;
+
+    width: 100%;
+    max-width: 360px;
+
+    margin: 4px;
+    padding: 5px;
+}
+
+.todo {
+    background-color: #f3c327;
+}
+
+.doing {
+    background-color: #3361fc;
+}
+
+.done {
+    background-color: #40ff43;
+}
+
+.flexbox .board .card {
+    padding: 15px 25px;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    box-shadow: rgba(28, 28, 28, 0.8) 3px 3px 5px;
+  
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.titleBoard {
+    text-transform: uppercase;
+    margin: 5px 0;
+}
